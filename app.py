@@ -11,8 +11,7 @@ def index():
     if request.method == 'POST':
         name = request.form.get('name')
         if name:
-            # Search for '<name> wikipedia' on Bing
-            search_url = f"https://www.bing.com/search?q={name}+wikipedia"
+            search_url = f"https://www.google.com/search?q={name}"
             search_page = requests.get(search_url)
             search_soup = BeautifulSoup(search_page.content, 'html.parser')
 
